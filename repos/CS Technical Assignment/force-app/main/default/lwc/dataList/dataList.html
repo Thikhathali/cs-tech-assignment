@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <template if:true={showData} for:each={holidays} for:item="holiday">
+            <div key={holiday.name} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_medium">
+                <div class="slds-card slds-p-around_x-large">
+                    <header class="slds-card_header">
+                        <h2 class="slds-text-heading_medium">{holiday.name}</h2>
+                    </header>
+                    <div class="slds-card__body">
+                        <p>{holiday.description}</p>
+                    </div>
+                    <footer class="slds-card__footer">
+                        <b class="slds-badge slds-text-color_success">{holiday.date}</b>
+                        <p class="slds-badge slds-text-color_error">{holiday.type}</p>
+                    </footer>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

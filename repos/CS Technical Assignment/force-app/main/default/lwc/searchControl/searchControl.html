@@ -1,0 +1,18 @@
+<template>
+    <div class="container slds-p-around_medium lgc-sm">  
+        <lightning-input type="search" placeholder="valid RSA ID number then press Enter.." value={searchValue} 
+        onkeyup={checkSearchInput} onfocus={handleFocus}></lightning-input>  
+        <div class="slds-m-top_large">
+            <lightning-button variant="success" label="Let's see!" title="submit" disabled={showBtnSubmit} 
+            onclick={handleSubmit}>
+            </lightning-button> <br /><br />
+             <p>
+                This website is designed to help you check <br /> if there are any significant public holidays on <br /> your birthdate.
+             </p>  
+        </div><br /> <br />        
+        <c-data-list show-data={showData} 
+            year={year} 
+            country={code}>
+        </c-data-list>       
+    </div>
+</template>
